@@ -8,12 +8,12 @@ public class Main {
     public static void main(String[] args) {
         List<PrintJob> printJobs = new ArrayList<>();
 
-        Scanner sc = new Scanner(Main.class.getResourceAsStream("jobs.txt"));
+        Scanner scanner = new Scanner(Main.class.getResourceAsStream("jobs.txt"));
 
-        while (sc.hasNext()){
-            String type = sc.next();
-            String id = sc.next();
-            int pages = sc.nextInt();
+        while (scanner.hasNext()){
+            String type = scanner.next();
+            String id = scanner.next();
+            int pages = scanner.nextInt();
 
             if (type.equals("MONO")){
                 printJobs.add(new MonoPrint(id, pages));
@@ -25,5 +25,7 @@ public class Main {
         for (PrintJob job : printJobs){
             System.out.println(job.summary());
         }
+
+        scanner.close();
     }
 }
