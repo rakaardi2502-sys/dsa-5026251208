@@ -15,6 +15,10 @@ public class Main {
             String id = scanner.next();
             int pages = scanner.nextInt();
 
+            if (pages < 0){
+                throw new IllegalArgumentException();
+            }
+
             if (type.equals("MONO")){
                 printJobs.add(new MonoPrint(id, pages));
             } else{
