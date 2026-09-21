@@ -16,7 +16,7 @@ public class Main {
             int pages = scanner.nextInt();
 
             if (pages <= 0){
-                throw new IllegalArgumentException("Pages must be greater 0");
+                throw new IllegalArgumentException("Pages must be greater than 0");
             }
 
             if (type.equals("MONO")){
