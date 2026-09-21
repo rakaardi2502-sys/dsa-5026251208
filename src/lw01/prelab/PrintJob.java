@@ -4,7 +4,7 @@ public abstract class PrintJob implements Chargeable{
     private String id;
     private int pages;
 
-    PrintJob (String id, int pages){
+    protected PrintJob (String id, int pages){
         this.id = id;
         this.pages = pages;
     }
