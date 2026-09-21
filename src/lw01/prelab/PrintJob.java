@@ -19,7 +19,7 @@ public abstract class PrintJob implements Chargeable{
     public abstract int calculateCharge();
 
     int calculateCharge(int copies) {
-        if (copies < 0){
+        if (copies <= 0){
             throw new IllegalArgumentException("Number of copies cannot be negative");
         }
         return copies * calculateCharge();
