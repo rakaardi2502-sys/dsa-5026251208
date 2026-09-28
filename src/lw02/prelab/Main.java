@@ -58,12 +58,11 @@ public class Main {
                         saldoBaru = saldoLama + Integer.parseInt(process[2]);
 
                         cust[2] = String.valueOf(saldoBaru);
-                        process[2] = String.valueOf(saldoBaru);
                     } else if(process[1].equals("WITHDRAW")){
                         if (saldoLama >= Integer.parseInt(process[2])){
                             saldoBaru = saldoLama - Integer.parseInt(process[2]);
-                            process[2] = String.valueOf(saldoBaru);
                             cust[2] = String.valueOf(saldoBaru);
+            
                         } else{
                             failTrans.add(0, process);
                         }
