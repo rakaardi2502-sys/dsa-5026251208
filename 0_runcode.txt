@@ -1,0 +1,5 @@
+bin/lw05/prelab/Main.class
+
+javac -d bin src\lw05\prelab\Main.java
+
+java -cp bin lw05.prelab.Main
